@@ -1,15 +1,218 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MontCam Apps</title><style>*{box-sizing:border-box}body{margin:0;font-family:-apple-system,system-ui,Segoe UI,Roboto,sans-serif;color:#2b2540;background:#fbfaff;line-height:1.6}
-main{max-width:720px;margin:0 auto;padding:32px 20px 64px}h1{font-size:30px;margin:0 0 8px}h2{font-size:20px;margin:32px 0 8px}
-.lang{color:#6b6480;font-size:14px;margin-bottom:24px}a{color:#5b4bd5}nav{margin-bottom:24px;font-size:15px}ul{padding-left:20px}
-hr{border:0;border-top:1px solid #e4e0f2;margin:40px 0}footer{font-size:13px;color:#6b6480;margin-top:48px}</style></head>
-<body><main>
-<h1>MontCam apps</h1>
-<p class="lang">English · Português</p>
-<p>Bilingual apps for toddlers, in Portuguese and English: Cartinhas, Barulhinhos, Estourinhos, Parzinhos and Pecinhas. No ads, no accounts, no personal data collected.</p>
-<ul>
-<li><a href="support.html">Support · Suporte</a></li>
-<li><a href="privacy.html">Privacy Policy · Política de Privacidade</a></li>
-</ul>
-<footer>MontCam · <a href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a></footer></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MontCam Apps</title>
+<meta name="description" content="Bilingual (Portuguese + English) games for toddlers. No ads, no accounts, no personal data collected. · Jogos bilíngues para crianças pequenas.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MontCam Apps">
+<meta property="og:description" content="All five bilingual toddler games in one bundle for US$ 8.99. No ads, no accounts, no data collected.">
+<meta property="og:url" content="https://montcam2020.github.io/montcam-apps/">
+<meta property="og:image" content="https://montcam2020.github.io/montcam-apps/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1b2039">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+:root{
+  --bg:#fff9ef; --bg2:#ffffff; --fg:#252240; --muted:#6a6585; --line:#eadfcb;
+  --brand:#6c4fe0; --brand-fg:#ffffff; --card:#ffffff; --shadow:0 10px 30px rgba(60,40,120,.10);
+  --teal:#2bbfa8; --purple:#a678f0; --blue:#3fa7f5; --yellow:#f9c923; --coral:#f45b69;
+  --hero1:#ffe9a8; --hero2:#ffd1dc; --hero3:#cfe8ff;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161a30; --bg2:#1d2240; --fg:#f4f1ff; --muted:#a8a3c6; --line:#2d3358;
+  --brand:#9c86ff; --brand-fg:#161a30; --card:#222850; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --hero1:#3a3568; --hero2:#4a2f5a; --hero3:#254a73; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161a30; --bg2:#1d2240; --fg:#f4f1ff; --muted:#a8a3c6; --line:#2d3358;
+  --brand:#9c86ff; --brand-fg:#161a30; --card:#222850; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --hero1:#3a3568; --hero2:#4a2f5a; --hero3:#254a73; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);line-height:1.6;
+  font-family:ui-rounded,"SF Pro Rounded","Nunito","Avenir Next",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left))}
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.01em;text-decoration:none;color:var(--fg);display:flex;align-items:center;gap:10px}
+.logo img{display:block}
+.lang{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;color:var(--muted);font:inherit;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--brand);color:var(--brand-fg)}
+/* hero */
+.hero{margin-top:6px;border-radius:32px;padding:clamp(28px,6vw,64px);position:relative;overflow:hidden;
+  background:radial-gradient(900px 400px at 85% -10%,var(--hero3),transparent 60%),radial-gradient(700px 400px at -5% 110%,var(--hero2),transparent 60%),var(--hero1)}
+.hero h1{margin:0 0 14px;font-size:clamp(34px,7vw,64px);line-height:1.05;letter-spacing:-.03em;text-wrap:balance;max-width:14ch}
+.hero p{margin:0;font-size:clamp(17px,2.4vw,21px);max-width:34em;color:var(--fg);opacity:.86}
+.deal{display:inline-flex;align-items:center;gap:14px;margin-top:22px;margin-right:12px;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--coral),#ff8a5b);padding:10px 20px 10px 12px;border-radius:999px;font-weight:700;box-shadow:0 8px 22px rgba(244,91,105,.35)}
+.deal b{white-space:nowrap;background:#fff;color:#d63a4a;border-radius:999px;padding:6px 14px;font-size:20px;letter-spacing:-.01em}
+.deal>span{font-size:16px}
+.soon{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:var(--fg);color:var(--bg);font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px}
+.soon::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(249,201,35,.3)}
+.float{position:absolute;right:clamp(-20px,2vw,30px);top:50%;transform:translateY(-50%);display:none}
+.float img{width:118px;height:118px;border-radius:26px;box-shadow:var(--shadow);position:absolute}
+@media(min-width:860px){.hero{padding-right:400px}.float{display:block;width:340px;height:300px}
+  .float img:nth-child(1){left:0;top:10px;transform:rotate(-8deg)}
+  .float img:nth-child(2){left:105px;top:0;transform:rotate(5deg);width:132px;height:132px}
+  .float img:nth-child(3){left:215px;top:35px;transform:rotate(-4deg)}
+  .float img:nth-child(4){left:40px;top:150px;transform:rotate(6deg)}
+  .float img:nth-child(5){left:170px;top:160px;transform:rotate(-6deg);width:128px;height:128px}}
+/* sections */
+section{padding-block:clamp(36px,6vw,72px) 0}
+h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;margin:0 0 8px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px;font-size:18px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr))}
+.app{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px;min-width:0}
+.app header{display:flex;align-items:center;gap:16px}
+.app img{width:84px;height:84px;border-radius:20px;flex:none;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.app h3{margin:0;font-size:24px;letter-spacing:-.01em;line-height:1.1}
+.app .kind{margin:4px 0 0;font-size:14px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.app p.d{margin:0;font-size:16.5px}
+.chip{align-self:flex-start;margin-top:auto;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;background:color-mix(in srgb,var(--c) 18%,transparent);color:var(--fg);border:1px solid color-mix(in srgb,var(--c) 55%,transparent)}
+@media(min-width:900px){.grid{grid-template-columns:repeat(6,1fr)}.app{grid-column:span 2}.app:nth-child(n+4){grid-column:span 3}}
+/* bundle */
+.bundle{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;border-radius:32px;padding:clamp(24px,5vw,48px);background:linear-gradient(135deg,#2b2160,#5a3fc0);color:#fff;position:relative;overflow:hidden}
+.bundle .bt{flex:1 1 340px;min-width:0}
+.bundle h2{color:#fff;margin:0 0 10px}
+.bundle p{margin:0;opacity:.9;font-size:18px;max-width:32em}
+.bundle .kind{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);margin:0 0 8px;opacity:1}
+.bundle .soon{background:#fff;color:#2b2160}
+.bi{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:320px}
+.bi img{width:92px;height:92px;border-radius:22px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.bi img:nth-child(odd){transform:rotate(-4deg)}.bi img:nth-child(even){transform:rotate(4deg)}
+/* promises */
+.prom{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.p{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:20px}
+.p b{display:block;font-size:19px;margin-bottom:4px}
+.p span{color:var(--muted);font-size:15.5px}
+.p::before{content:"";display:block;width:34px;height:8px;border-radius:99px;background:var(--c);margin-bottom:14px}
+/* langs strip */
+.strip{margin-top:clamp(36px,6vw,72px);border-radius:28px;padding:clamp(22px,4vw,40px);background:var(--fg);color:var(--bg);display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between}
+.strip h2{margin:0;color:var(--bg)}
+.strip p{margin:6px 0 0;opacity:.8;max-width:30em}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{font-weight:800;padding:10px 18px;border-radius:999px;background:var(--bg);color:var(--fg)}
+/* footer */
+footer{margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);padding-block:28px calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:15px}
+footer .row{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer a{font-weight:700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+html[lang="en"] [lang-pt]{display:none!important}
+html[lang="pt-BR"] [lang-en]{display:none!important}
+@media (prefers-reduced-motion:no-preference){.app{transition:transform .2s ease}.app:hover{transform:translateY(-4px)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="logo" href="./"><img src="assets/logo-mark.svg" alt="" width="34" height="34">MontCam</a>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-l="en" aria-pressed="true">EN</button>
+      <button type="button" data-l="pt-BR" aria-pressed="false">PT</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1><span lang-en>Tiny games, big smiles.</span><span lang-pt>Joguinhos pequenos, sorrisos grandes.</span></h1>
+    <p><span lang-en>Bilingual games for toddlers, in Portuguese and English. Pop balloons, match shadows, guess animal sounds and more.</span><span lang-pt>Jogos bilíngues para crianças pequenas, em português e inglês. Estoure balões, combine sombras, adivinhe sons de animais e muito mais.</span></p>
+    <a class="deal" href="#bundle"><b>US$ 8.99</b><span><span lang-en>All 5 games in one bundle</span><span lang-pt>Os 5 jogos em um só pacote</span></span></a>
+    <div class="soon"><span lang-en>Coming soon to the App Store · iPhone &amp; iPad</span><span lang-pt>Em breve na App Store · iPhone e iPad</span></div>
+    <div class="float" aria-hidden="true">
+      <img src="assets/icon-estourinhos.png" alt=""><img src="assets/icon-cartinhas.png" alt=""><img src="assets/icon-barulhinhos.png" alt=""><img src="assets/icon-parzinhos.png" alt=""><img src="assets/icon-pecinhas.png" alt="">
+    </div>
+  </div>
+
+  <section id="apps">
+    <h2><span lang-en>Meet the games</span><span lang-pt>Conheça os jogos</span></h2>
+    <p class="sub"><span lang-en>Each one is simple, calm and made to be played with a parent nearby.</span><span lang-pt>Cada um é simples, calmo e feito para brincar com um adulto por perto.</span></p>
+    <div class="grid">
+      <article class="app" style="--c:var(--teal)">
+        <header><img src="assets/icon-cartinhas.png" alt="Cartinhas icon" width="84" height="84"><div><h3>Cartinhas</h3><p class="kind"><span lang-en>Flashcards</span><span lang-pt>Cartas</span></p></div></header>
+        <p class="d"><span lang-en>Tap a card, see the picture and hear the word in Portuguese, English or both.</span><span lang-pt>Toque na carta, veja a figura e ouça a palavra em português, inglês ou nos dois.</span></p>
+        <span class="chip"><span lang-en>Words · Pictures</span><span lang-pt>Palavras · Figuras</span></span>
+      </article>
+      <article class="app" style="--c:var(--yellow)">
+        <header><img src="assets/icon-barulhinhos.png" alt="Barulhinhos icon" width="84" height="84"><div><h3>Barulhinhos</h3><p class="kind"><span lang-en>Animal sounds</span><span lang-pt>Sons de animais</span></p></div></header>
+        <p class="d"><span lang-en>Listen to real animal sounds and guess who made the noise.</span><span lang-pt>Ouça sons de animais de verdade e descubra quem fez o barulho.</span></p>
+        <span class="chip"><span lang-en>Listen · Guess</span><span lang-pt>Ouvir · Adivinhar</span></span>
+      </article>
+      <article class="app" style="--c:var(--purple)">
+        <header><img src="assets/icon-pecinhas.png" alt="Pecinhas icon" width="84" height="84"><div><h3>Pecinhas</h3><p class="kind"><span lang-en>Easy puzzles</span><span lang-pt>Quebra-cabeças fáceis</span></p></div></header>
+        <p class="d"><span lang-en>Drag the pieces and build the picture, one easy puzzle at a time.</span><span lang-pt>Arraste as peças e monte a figura, um quebra-cabeça fácil de cada vez.</span></p>
+        <span class="chip"><span lang-en>Drag · Build</span><span lang-pt>Arrastar · Montar</span></span>
+      </article>
+      <article class="app" style="--c:var(--coral)">
+        <header><img src="assets/icon-parzinhos.png" alt="Parzinhos icon" width="84" height="84"><div><h3>Parzinhos</h3><p class="kind"><span lang-en>Shadow match</span><span lang-pt>Sombras</span></p></div></header>
+        <p class="d"><span lang-en>Match each picture with its shadow.</span><span lang-pt>Combine cada figura com a sua sombra.</span></p>
+        <span class="chip"><span lang-en>Match · Look closely</span><span lang-pt>Combinar · Observar</span></span>
+      </article>
+      <article class="app" style="--c:var(--blue)">
+        <header><img src="assets/icon-estourinhos.png" alt="Estourinhos icon" width="84" height="84"><div><h3>Estourinhos</h3><p class="kind">Pop the Balloons</p></div></header>
+        <p class="d"><span lang-en>Pop colorful balloons to learn colors and numbers. In Challenge mode, a voice asks for a color.</span><span lang-pt>Estoure balões coloridos e aprenda cores e números. No Desafio, uma voz pede uma cor.</span></p>
+        <span class="chip"><span lang-en>Colors · Numbers · Challenge</span><span lang-pt>Cores · Números · Desafio</span></span>
+      </article>
+    </div>
+  </section>
+
+  <section id="bundle">
+    <div class="bundle">
+      <div class="bt">
+        <p class="kind"><span lang-en>MontCam Bundle</span><span lang-pt>Pacote MontCam</span></p>
+        <h2><span lang-en>All five games for US$ 8.99</span><span lang-pt>Os cinco jogos por US$ 8,99</span></h2>
+        <p><span lang-en>Cartinhas, Barulhinhos, Estourinhos, Parzinhos and Pecinhas together, for less than buying them one by one.</span><span lang-pt>Cartinhas, Barulhinhos, Estourinhos, Parzinhos e Pecinhas juntos, por menos do que comprar um a um.</span></p>
+        <span class="soon"><span lang-en>Bundle coming soon to the App Store</span><span lang-pt>Pacote em breve na App Store</span></span>
+      </div>
+      <div class="bi" aria-hidden="true"><img src="assets/icon-cartinhas.png" alt=""><img src="assets/icon-barulhinhos.png" alt=""><img src="assets/icon-estourinhos.png" alt=""><img src="assets/icon-parzinhos.png" alt=""><img src="assets/icon-pecinhas.png" alt=""></div>
+    </div>
+  </section>
+
+  <section id="promises">
+    <h2><span lang-en>Made with care</span><span lang-pt>Feito com carinho</span></h2>
+    <p class="sub"><span lang-en>Peace of mind for parents.</span><span lang-pt>Tranquilidade para os pais.</span></p>
+    <div class="prom">
+      <div class="p" style="--c:var(--coral)"><b lang-en>No ads</b><b lang-pt>Sem anúncios</b><span lang-en>Nothing to distract or interrupt.</span><span lang-pt>Nada para distrair ou interromper.</span></div>
+      <div class="p" style="--c:var(--yellow)"><b lang-en>No accounts</b><b lang-pt>Sem contas</b><span lang-en>Open the app and play.</span><span lang-pt>Abra o app e brinque.</span></div>
+      <div class="p" style="--c:var(--teal)"><b lang-en>No personal data</b><b lang-pt>Sem dados pessoais</b><span lang-en>We do not collect any.</span><span lang-pt>Não coletamos nenhum.</span></div>
+      <div class="p" style="--c:var(--blue)"><b lang-en>Works offline</b><b lang-pt>Funciona offline</b><span lang-en>No internet needed after installing.</span><span lang-pt>Sem internet depois de instalar.</span></div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div>
+      <h2><span lang-en>Portuguese, English, or both</span><span lang-pt>Português, inglês ou os dois</span></h2>
+      <p><span lang-en>Switch the language with one tap and hear every word spoken.</span><span lang-pt>Troque o idioma com um toque e ouça cada palavra falada.</span></p>
+    </div>
+    <div class="tags" aria-hidden="true"><span>PT</span><span>EN</span><span>PT + EN</span></div>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div>© MontCam · <a href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a></div>
+      <nav>
+        <a href="support.html"><span lang-en>Support</span><span lang-pt>Suporte</span></a>
+        <a href="privacy.html"><span lang-en>Privacy Policy</span><span lang-pt>Política de Privacidade</span></a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.lang button');
+  function set(l){
+    root.lang=l;
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===l))});
+    try{localStorage.setItem('montcam_lang',l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('montcam_lang')}catch(e){}
+  var guess=(navigator.language||'en').toLowerCase().indexOf('pt')===0?'pt-BR':'en';
+  set(saved==='en'||saved==='pt-BR'?saved:guess);
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+})();
+</script>
+</body>
+</html>
