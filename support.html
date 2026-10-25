@@ -1,27 +1,122 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MontCam Apps - Support</title><style>*{box-sizing:border-box}body{margin:0;font-family:-apple-system,system-ui,Segoe UI,Roboto,sans-serif;color:#2b2540;background:#fbfaff;line-height:1.6}
-main{max-width:720px;margin:0 auto;padding:32px 20px 64px}h1{font-size:30px;margin:0 0 8px}h2{font-size:20px;margin:32px 0 8px}
-.lang{color:#6b6480;font-size:14px;margin-bottom:24px}a{color:#5b4bd5}nav{margin-bottom:24px;font-size:15px}ul{padding-left:20px}
-hr{border:0;border-top:1px solid #e4e0f2;margin:40px 0}footer{font-size:13px;color:#6b6480;margin-top:48px}</style></head>
-<body><main>
-<nav><a href="index.html">MontCam apps</a> · <a href="privacy.html">Privacy Policy</a></nav>
-<h1>Support · Suporte</h1>
-<p class="lang">English · Português</p>
-<p>Need help with Cartinhas, Barulhinhos, Estourinhos, Parzinhos and Pecinhas? Write to <a href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a>. We reply as soon as we can.</p>
-<h2>Common questions</h2>
-<ul>
-<li><b>No sound?</b> Check the device volume and the sound button in the app.</li>
-<li><b>Voice in the wrong language?</b> Choose Portuguese, English or both with the language buttons in the app.</li>
-<li><b>Works without internet?</b> Yes. After installation, the apps work offline.</li>
-</ul>
-<hr>
-<h2>Suporte</h2>
-<p>Precisa de ajuda com Cartinhas, Barulhinhos, Estourinhos, Parzinhos and Pecinhas? Escreva para <a href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a>. Respondemos o mais rápido possível.</p>
-<h2>Dúvidas comuns</h2>
-<ul>
-<li><b>Sem som?</b> Verifique o volume do aparelho e o botão de som no app.</li>
-<li><b>Voz em outro idioma?</b> Escolha português, inglês ou os dois nos botões de idioma do app.</li>
-<li><b>Funciona sem internet?</b> Sim. Depois de instalados, os apps funcionam offline.</li>
-</ul>
-<footer>MontCam · <a href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a></footer></main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MontCam Apps - Support</title>
+<meta name="description" content="Help with the MontCam apps: Cartinhas, Barulhinhos, Estourinhos, Parzinhos and Pecinhas. · Ajuda com os apps MontCam.">
+<meta name="theme-color" content="#1b2039">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="MontCam Apps - Support · Suporte">
+<meta property="og:image" content="https://montcam2020.github.io/montcam-apps/assets/og.png">
+<style>:root{
+  --bg:#fff9ef; --bg2:#ffffff; --fg:#252240; --muted:#6a6585; --line:#eadfcb;
+  --brand:#6c4fe0; --brand-fg:#ffffff; --card:#ffffff; --shadow:0 10px 30px rgba(60,40,120,.10);
+  --teal:#2bbfa8; --purple:#a678f0; --blue:#3fa7f5; --yellow:#f9c923; --coral:#f45b69;
+  --hero1:#ffe9a8; --hero2:#ffd1dc; --hero3:#cfe8ff;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161a30; --bg2:#1d2240; --fg:#f4f1ff; --muted:#a8a3c6; --line:#2d3358;
+  --brand:#9c86ff; --brand-fg:#161a30; --card:#222850; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --hero1:#3a3568; --hero2:#4a2f5a; --hero3:#254a73; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161a30; --bg2:#1d2240; --fg:#f4f1ff; --muted:#a8a3c6; --line:#2d3358;
+  --brand:#9c86ff; --brand-fg:#161a30; --card:#222850; --shadow:0 10px 30px rgba(0,0,0,.35);
+  --hero1:#3a3568; --hero2:#4a2f5a; --hero3:#254a73; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);line-height:1.6;
+  font-family:ui-rounded,"SF Pro Rounded","Nunito","Avenir Next",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left))}
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.01em;text-decoration:none;color:var(--fg);display:flex;align-items:center;gap:10px}
+.logo img{display:block}
+.lang{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;color:var(--muted);font:inherit;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--brand);color:var(--brand-fg)}
+/* footer */
+footer{margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);padding-block:28px calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:15px}
+footer .row{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer a{font-weight:700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+html[lang="en"] [lang-pt]{display:none!important}
+html[lang="pt-BR"] [lang-en]{display:none!important}
+@media (prefers-reduced-motion:no-preference){.app{transition:transform .2s ease}.app:hover{transform:translateY(-4px)}}
+
+.page-hero{margin-top:6px;border-radius:32px;padding:clamp(26px,5vw,52px);background:radial-gradient(900px 400px at 85% -10%,var(--hero3),transparent 60%),radial-gradient(700px 400px at -5% 110%,var(--hero2),transparent 60%),var(--hero1)}
+.page-hero h1{margin:0 0 10px;font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.03em}
+.page-hero p{margin:0;font-size:clamp(17px,2.3vw,20px);max-width:34em;opacity:.88}
+.crumb{font-size:15px;margin:0 0 14px}
+.crumb a{font-weight:700;text-decoration:none}
+section{padding-block:clamp(30px,5vw,56px) 0}
+h2{font-size:clamp(24px,3.6vw,32px);letter-spacing:-.02em;margin:0 0 14px}
+.contact{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;background:var(--fg);color:var(--bg);border-radius:26px;padding:clamp(20px,4vw,32px);margin-top:24px}
+.contact h2{margin:0 0 4px;color:var(--bg);font-size:clamp(22px,3.4vw,28px)}
+.contact p{margin:0;opacity:.8}
+.mail{display:inline-block;background:var(--bg);color:var(--fg);font-weight:800;font-size:clamp(16px,2.4vw,20px);padding:12px 22px;border-radius:999px;text-decoration:none;word-break:break-all}
+.faq{display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:4px 20px;box-shadow:var(--shadow)}
+summary{cursor:pointer;font-weight:800;font-size:18px;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:1;color:var(--brand);flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--muted);font-size:16.5px}
+html[lang="en"] [lang-pt]{display:none!important}
+html[lang="pt-BR"] [lang-en]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="logo" href="./"><img src="assets/logo-mark.svg" alt="" width="34" height="34">MontCam</a>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-l="en" aria-pressed="true">EN</button>
+      <button type="button" data-l="pt-BR" aria-pressed="false">PT</button>
+    </div>
+  </div>
+  <div class="page-hero">
+    <p class="crumb"><a href="./"><span lang-en>← MontCam apps</span><span lang-pt>← Apps MontCam</span></a></p>
+    <h1><span lang-en>Support</span><span lang-pt>Suporte</span></h1>
+    <p><span lang-en>Need help with Cartinhas, Barulhinhos, Estourinhos, Parzinhos or Pecinhas? We are happy to help.</span><span lang-pt>Precisa de ajuda com Cartinhas, Barulhinhos, Estourinhos, Parzinhos ou Pecinhas? Ficamos felizes em ajudar.</span></p>
+  </div>
+  <div class="contact">
+    <div><h2><span lang-en>Write to us</span><span lang-pt>Escreva para nós</span></h2><p><span lang-en>We reply as soon as we can.</span><span lang-pt>Respondemos o mais rápido possível.</span></p></div>
+    <a class="mail" href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a>
+  </div>
+  <section>
+    <h2><span lang-en>Common questions</span><span lang-pt>Dúvidas comuns</span></h2>
+    <div class="faq">
+<details><summary><span lang-en>No sound?</span><span lang-pt>Sem som?</span></summary><p><span lang-en>Check the device volume, the silent switch and the sound button inside the app.</span><span lang-pt>Verifique o volume do aparelho, o botão de silencioso e o botão de som dentro do app.</span></p></details>
+<details><summary><span lang-en>Voice in the wrong language?</span><span lang-pt>Voz em outro idioma?</span></summary><p><span lang-en>Choose Portuguese, English or both with the language buttons (PT, EN, PT+EN) at the top of the app.</span><span lang-pt>Escolha português, inglês ou os dois com os botões de idioma (PT, EN, PT+EN) no topo do app.</span></p></details>
+<details><summary><span lang-en>Does it work without internet?</span><span lang-pt>Funciona sem internet?</span></summary><p><span lang-en>Yes. After installation, the apps work offline.</span><span lang-pt>Sim. Depois de instalados, os apps funcionam offline.</span></p></details>
+<details><summary><span lang-en>The game froze or looks wrong</span><span lang-pt>O jogo travou ou ficou estranho</span></summary><p><span lang-en>Close the app completely and open it again. Also check in the App Store that you have the latest version. If it keeps happening, write to us and tell us your device and what you were doing.</span><span lang-pt>Feche o app por completo e abra de novo. Confira também na App Store se você tem a versão mais recente. Se continuar, escreva para nós dizendo o aparelho e o que você estava fazendo.</span></p></details>
+<details><summary><span lang-en>Do the apps collect any data?</span><span lang-pt>Os apps coletam dados?</span></summary><p><span lang-en>No. There are no ads, no accounts and no personal data collected. See our Privacy Policy for details.</span><span lang-pt>Não. Não há anúncios, contas nem coleta de dados pessoais. Veja nossa Política de Privacidade para mais detalhes.</span></p></details>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div>© MontCam · <a href="mailto:montcam2020@gmail.com">montcam2020@gmail.com</a></div>
+      <nav>
+        <a href="./"><span lang-en>Home</span><span lang-pt>Início</span></a>
+        <a href="privacy.html"><span lang-en>Privacy Policy</span><span lang-pt>Política de Privacidade</span></a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.lang button');
+  function set(l){root.lang=l;btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===l))});try{localStorage.setItem('montcam_lang',l)}catch(e){}}
+  var saved=null; try{saved=localStorage.getItem('montcam_lang')}catch(e){}
+  var guess=(navigator.language||'en').toLowerCase().indexOf('pt')===0?'pt-BR':'en';
+  set(saved==='en'||saved==='pt-BR'?saved:guess);
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l)})});
+})();
+</script>
+</body>
+</html>
